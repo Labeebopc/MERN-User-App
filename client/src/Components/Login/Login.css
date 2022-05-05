@@ -1,0 +1,18 @@
+.loginform{
+    border: solid 2px;
+    width: 400px;
+    height: 220px;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: bisque;
+}
+#loginbtn1{
+    margin-left: 97px;
+}
+#loginbtn2{
+    margin-left: 267px;
+    margin-top: -66px;
+}

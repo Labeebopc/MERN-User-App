@@ -1,0 +1,17 @@
+.form{
+    border: solid 2px;
+    width: 400px;
+    height: 350px;
+    padding: 15px;
+    border-radius: 12px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: bisque;
+
+}
+.btn{
+    width: 150px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
