@@ -12,7 +12,7 @@ This is a User app, where a user can Signup, Login, Add product to dashboard etc
                 * Created userRoutes in routes folder
                 * Implemented "bcrypt" for hashing user password
                 * Created "jwt-web-token" for user
-                * Checked Signup, Login, getUser etc.. by Id with postman
+                * Checked Signup, Login, getUser by Id etc.. with postman
                 
      3. In client side (frontend)->
                 * Created a app using the command "npx-create-react-app ./"
