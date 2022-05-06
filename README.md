@@ -2,8 +2,8 @@
 This is a User app, where a user can Signup, Login, Add product to dashboard etc.. 
 # Steps
     1. Created a client side & server side folders to differentiate frontend and backend
-    2. In server side (backend)->
-                
+    
+    2. In server side (backend)-> 
                 * Initialized a empty package.json file
                 * Defined a PORT and connected with mongodb 27017
                 * Installed packages like express, body-parser,cors, mongoose etc...
