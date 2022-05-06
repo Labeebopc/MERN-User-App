@@ -67,11 +67,11 @@ export const Login = async (req, res) => {
 
  // jwt token verification
 
-export const verifyToken = (req, res)=>{
-    const headers = req.headers['authorization'];
+export const verifyToken = (req, res, next)=>{
+    const headers = req.headers.authorization;
     console.log(headers);
 
-    const token = headers.split("")[1];
+    const token = headers.replace('Bearer ', '')
     if (!token) {
         return res.status(404).json({ success: false, message: "No Token Found" })
     }
@@ -81,8 +81,30 @@ export const verifyToken = (req, res)=>{
             return res.status(400).json({ success: false, message: "Invalid Token" })
         }
         console.log(user.id);
+        req.id = user.id;
 
     })
-
+    next();
 
 }
+
+ // get user
+
+ export const getUser = async (req, res)=>{
+     const userId = req.id;
+     let user;
+     try {
+         user = await User.findById(userId, '-password')
+         
+     } catch (error) {
+        return res.status(400).json({ success: false})
+         
+     }
+     if (!user) {
+        return res.status(404).json({ success: false, message: "User Not Found" })
+    }
+    return res.status(200).json({ success: true, user })
+
+ }
+
+
