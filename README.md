@@ -13,8 +13,8 @@ This is a User app, where a user can Signup, Login, Add product to dashboard etc
                 * Implemented "bcrypt" for hashing user password
                 * Created "jwt-web-token" for user
                 * Checked Signup, Login, getUser etc.. by Id with postman
+                
      3. In client side (frontend)->
-     
                 * Created a app using the command "npx-create-react-app ./"
                 * Installed npm packages like axios, react-router-dom@6, bootstrap etc...
                 * Created & designed components for Signup from, Login form using bootstrap
