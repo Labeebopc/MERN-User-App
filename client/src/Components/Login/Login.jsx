@@ -1,17 +1,21 @@
 import React from 'react'
-import { useState } from 'react'
-import { Link, useNavigate  } from 'react-router-dom'
+import axios from 'axios'
+import { useState} from 'react'
+import { Link, useNavigate} from 'react-router-dom'
 import './Login.css'
 
 function Login() {
+  const history = useNavigate()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const navigate = useNavigate()
-
 
   const handleLogin = (e) => {
-    e.preventDefault()
-    navigate("/dashboard")
+    e.preventDefault();
+    axios.post("http://localhost:5000/api/login",{
+            email:e.target.email.value,
+            password:e.target.password.value,
+          }).then(()=>history('/user'))
+
   }
   return (
     <form action='/login' className='loginform' method='post' onSubmit={handleLogin}>

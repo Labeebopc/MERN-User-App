@@ -1,8 +1,11 @@
 import React from 'react'
+import axios from 'axios'
 import { useState } from 'react'
 import './Signup.css'
+import { useNavigate } from 'react-router-dom'
 
 function Signup() {
+    const history = useNavigate()
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -11,7 +14,14 @@ function Signup() {
 
     const handleSignup = (e) => {
         e.preventDefault()
-        console.log();
+        console.log(e.target.name.value);
+        axios.post("http://localhost:5000/api/signup",{
+            name:e.target.name.value,
+            email:e.target.email.value,
+            password:e.target.password.value,
+            place:e.target.place.value,
+          }).then((res)=>history('/login'))
+    
     }
     return (
         <form action='/signup' className='form' method='post' onSubmit={handleSignup}>

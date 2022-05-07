@@ -1,3 +1,4 @@
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Routes, Route } from "react-router-dom";
 import Login from './Components/Login/Login'
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="signup" element={<Signup />} />
         <Route path="login" element={<Login />} />
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="user" element={<Dashboard />} />
         <Route path="addproducts" element={<AddProducts />} />
         <Route path="*" element={<PageNotFound />} />
       </Routes>
