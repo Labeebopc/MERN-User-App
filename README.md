@@ -20,5 +20,6 @@ This is a User app, where a user can Signup, Login, Add product to dashboard etc
                 * Created & designed components for Signup from, Login form using bootstrap
                 * Created and designed Dashboard page, Error page 
                 * Navigated using react-router
+                * Signup and Login process completed (user can signup, then login to dashboard with credentials)
                 
                 
