@@ -3,12 +3,17 @@ import mongoose from "mongoose";
 const Schema = mongoose.Schema;
 
 export const ProductSchema = new Schema({
-    name: {type: String, required: true},
+    name: { type: String, required: [true, "Please Enter Product Name"] },
 
-    price: {type: Number, required: true},
-    
-    Quantity: {type: Number, required: true},
+    price: { type: Number, required: [true, "Please Enter Product Price"] },
 
-    category: {type: String, required: true}
-  
+    quantity: { type: Number, required: [true, "Please Enter Quantity"] },
+
+    category: { type: String, required: [true, "Please Enter Product Category"] },
+
+    // images: [{
+    //     public_id: { type: String, required: true },
+    //     url: { type: String, required: true },
+    // }]
+
 })

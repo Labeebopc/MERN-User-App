@@ -5,6 +5,7 @@ import mongoose from 'mongoose'
 import dotenv, { config } from 'dotenv'
 config({path:'./config.env'})
 import userRoutes from './routes/userRoutes.js' 
+import productRoutes from './routes/productRoutes.js'
 
 
 const app =express();
@@ -15,6 +16,7 @@ app.use(bodyParser.urlencoded({limit:"30mb", extended:true}));
 app.use(cors());
 
 app.use('/api',userRoutes)
+app.use('/api',productRoutes)
 
 
 const CONNECTION_URL = process.env.MONGO_URL;
