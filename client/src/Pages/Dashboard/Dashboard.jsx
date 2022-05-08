@@ -1,12 +1,18 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Dashboard.css'
 
 function Dashboard() {
-
+    const history = useNavigate();
+    
+    const handleLogout =()=>{
+        localStorage.clear();
+        history('/register')
+    }
+    
     return (
         <div className='product-list'>
-            <div className='btnlogout'><button className='btn btn-secondary mb-3'>Log Out</button></div>
+            <div className='btnlogout'><button className='btn btn-secondary mb-3' onClick={handleLogout}>Log Out</button></div>
             <table className="table table-bordered">
                 <thead>
                     <tr>
